@@ -1,4 +1,6 @@
-function add(){
+var botoncito = document.getElementById('btn');
+
+botoncito.addEventListener('click', function(){
 	//tenemos que tomar el texto ingresado en el textarea
 	var comments = document.getElementById('comment').value;
 
@@ -36,13 +38,17 @@ function add(){
 	newComments.appendChild(contenedorElemento);
 
 	cont.appendChild(newComments);
+	//evento que al hacer click le agrega color rojo al corazón
+	heart.addEventListener('click', function(){
+		heart.classList.toggle('red');
+	})
+	//evento que al hacer click remueve el div del comentario completo
+	trash.addEventListener('click', function(){
+		cont.removeChild(newComments);
+	})
+	//evento que agrega tachado al párrafo al hacer click en el checkbox
+	chck.addEventListener('click', function(){
+		contenedorElemento.classList.toggle('strike-out'); //agrego clase tachado a parrafo contenedor de comentarios, se activa al hacer click, toggle es como un switch, agrega y quita sucesivamente
+	})
 
-
-
-
-
-
-
-
-
-}
+})

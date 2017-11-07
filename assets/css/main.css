@@ -48,6 +48,7 @@ textarea {
 	border-radius: 1em;
 	border: none;
 	margin: 0 auto;
+	resize: none;
 }
 
 /* Estilos botón agregar */
@@ -95,6 +96,7 @@ textarea {
 .heart, .trash {
 	margin:1em;
 	float: right;
+	cursor: pointer;
 }
 
 .trash:hover {
